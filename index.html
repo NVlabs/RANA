@@ -1,0 +1,176 @@
+---
+redirect_from:
+  - https://nvlabs.github.io/rana
+  - nvlabs.github.io/rana
+  - /rana
+---
+
+
+<!DOCTYPE html>
+<html lang="" xml:lang="" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZEKLLQP31"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-KZEKLLQP31');
+  </script>
+  
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>
+    RANA: Relightable Articulated Neural Avatars
+  </title>
+  <meta content="RANA" property="og:title" />
+  <meta content="We propose RANA, a relightable and articulated neural avatar for the photorealistic synthesis of humans under arbitrary viewpoints, body poses, and lighting. We only require a short video clip of the person to create the avatar and assume no knowledge about the lighting environment. We present a novel framework to model humans while disentangling their geometry, texture, and also lighting environment from monocular RGB videos. To simplify this otherwise ill-posed task we first estimate the coarse geometry and texture of the person via SMPL+D model fitting and then learn an articulated neural representation for photorealistic image generation. RANA first generates the normal and albedo maps of the person in any given target body pose and then uses spherical harmonics lighting to generate the shaded image in the target lighting environment. We also propose to pretrain RANA using synthetic images and demonstrate that it leads to better disentanglement between geometry and texture while also improving robustness to novel body poses. Finally, we also present a new photorealistic synthetic dataset, Relighting Humans, to quantitatively evaluate the performance of the proposed approach." name="description" property="og:description" />
+  <meta name="keywords" content="Digital Human Avatars, Relightable Humans, Neural Avatars, Human Animation, Human Synthesis">
+
+  <link rel="stylesheet" href="./assets/css/project_stylesheet.css">
+  <link href="./data/favicon.ico" rel="shortcut icon">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="./assets/academicons/css/academicons.min.css">
+
+  <script defer src="./assets/js/fontawesome.all.min.js"></script>
+
+</head>
+
+<body>
+  <div class="n-header">
+  </div>
+  <div class="n-title">
+    <h1>
+      RANA: Relightable Articulated Neural Avatars
+    </h1>
+  </div>
+  <div class="n-byline">
+    <div class="byline">
+      <ul class="authors">
+        <li>
+          <a href="http://www.umariqbal.info/" target="_blank">Umar Iqbal</a>
+        </li>
+        <li>
+          <a href="https://akincaliskan3d.github.io/" target="_blank">Akin Caliskan</a>
+        </li>
+        <li>
+          <a href="https://luminohope.org/" target="_blank">Koki Nagano</a>
+        </li>
+        <li>
+          <a href="https://www.samehkhamis.com/" target="_blank">Sameh Khamis</a>
+        </li>
+        <li>
+          <a href="https://research.nvidia.com/person/pavlo-molchanov/" target="_blank">Pavlo Molchanov</a>
+        </li>
+        <li>
+          <a href="https://jankautz.com/" target="_blank">Jan Kautz</a>
+        </li>
+      </ul>
+      <ul class="authors affiliations">
+        <li>
+          NVIDIA
+        </li>
+      </ul>
+      <ul class="authors links">
+        <li>
+          <a href="" target="_blank">
+            <button class="btn"><i class="fa fa-file-pdf"></i> Paper</button>
+          </a>
+        </li>
+        <li>
+          <a href="https://youtu.be/s-hIhIMjPqQ" target="_blank">
+            <button class="btn"><i class="fab fa-youtube"></i> Video</button>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="n-article">
+    <!-- 
+    <table style="width:100%;border:0px;border-spacing:5px 0px;border-collapse:separate;margin-right:auto;margin-left:auto;padding-bottom:20px;"><tbody>
+      <tr class="block_videos">
+        <td>
+          <video width=100% height=auto muted autoplay loop playsinline>
+            <source src="data/rana_v1.mp4#t=0.001" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </td>
+      </tr>
+    </table>
+  -->
+
+    <h2 id="abstract">
+      Abstract
+    </h2>
+    <p>
+      We propose RANA, a relightable and articulated neural avatar for the photorealistic synthesis of humans under arbitrary viewpoints, body poses, and lighting. We only require a short video clip of the person to create the avatar and assume no knowledge about the lighting environment. We present a novel framework to model humans while disentangling their geometry, texture, and also lighting environment from monocular RGB videos. To simplify this otherwise ill-posed task we first estimate the coarse geometry and texture of the person via SMPL+D model fitting and then learn an articulated neural representation for photorealistic image generation. RANA first generates the normal and albedo maps of the person in any given target body pose and then uses spherical harmonics lighting to generate the shaded image in the target lighting environment. We also propose to pretrain RANA using synthetic images and demonstrate that it leads to better disentanglement between geometry and texture while also improving robustness to novel body poses. Finally, we also present a new photorealistic synthetic dataset, Relighting Humans, to quantitatively evaluate the performance of the proposed approach.
+    </p>
+
+    <h2>
+      Video
+    </h2>
+    <div class="video_wrapper shadow">
+      <iframe width="705" height="397" border-style=none src="https://www.youtube.com/embed/s-hIhIMjPqQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <!--
+    <h2 id="comp_sota">
+      Comparison with the state-of-the-art
+    </h2>
+    <video class="centered shadow video_without_cap" width="100%" autoplay muted loop playsinline>
+        <source src="data/rana.mp4#t=0.001" type="video/mp4" />
+    </video>
+    <video class="centered shadow video_without_cap" width="100%" autoplay muted loop playsinline>
+        <source src="data/rana.mp4#t=0.001" type="video/mp4" />
+    </video>
+
+    <h2 id="add_vis">
+      Additional Visualizations
+    </h2>
+    <video class="centered shadow video_without_cap" width="100%" autoplay muted loop playsinline>
+        <source src="data/rana.mp4#t=0.001" type="video/mp4" />
+    </video>
+    <video class="centered shadow video_without_cap" width="100%" autoplay muted loop playsinline>
+        <source src="data/rana.mp4#t=0.001" type="video/mp4" />
+    </video>
+    <video class="centered shadow video_without_cap" width="100%" autoplay muted loop playsinline>
+        <source src="data/rana.mp4#t=0.001" type="video/mp4" />
+    </video>
+    <video class="centered shadow video_without_cap" width="100%" autoplay muted loop playsinline>
+        <source src="data/rana.mp4#t=0.001" type="video/mp4" />
+    </video>
+  -->
+
+    <h2 id="citation">
+      Citation
+    </h2>
+    <pre class="bibtex">
+      <code>
+@article{iqbal2022rana,
+  title={RANA: Relightable Articulated Neural Avatars},
+  author={Iqbal, Umar and Caliskan, Akin and Nagano, Koki and Khamis, Sameh and Molchanov, Pavlo and Kautz, Jan},
+  journal={arXiv preprint arXiv:2212.xxxxx},
+  year={2022}
+}
+      </code>
+    </pre>
+
+    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+      <tr>
+        <td style="padding:0px">
+          <br>
+          <p style="text-align:right;font-size:small;">
+            Template adapted from <a href="https://nvlabs.github.io/GLAMR" target="_blank" style="font-size: small;">GLAMR</a>.
+          </p>
+        </td>
+      </tr>
+    </tbody></table>
+
+  </div>
+</body>
+
+</html>
